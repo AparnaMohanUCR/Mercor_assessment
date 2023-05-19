@@ -1,0 +1,184 @@
+.App {
+  text-align: center;
+  font-family: Calibri, sans-serif;
+}
+
+.WordArt {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.WordArt .Butterflies {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 5px blue, 0 0 20px blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.WordArt h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: blue;
+  font-style: italic;
+  font-family: cursive;
+  animation:glow 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.WordArt h1 span {
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.AnimatedOnScroll p {
+  font-size: 18px;
+}
+
+.Box {
+  display: inline-block;
+  margin: 20px;
+}
+
+.LineContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.Line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+}
+
+.LineTop {
+  border-top-color: purple;
+}
+
+.LineRight {
+  border-right-color: purple;
+}
+
+.LineBottom {
+  border-bottom-color: purple;
+}
+
+.LineLeft {
+  border-left-color: purple;
+}
+
+.Line.Active {
+  animation: animateLine 1s infinite;
+}
+
+.BoxNumberContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.BoxNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.SquareBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  margin: 20px auto;
+}
+
+.RectangularBox {
+  width: 80px;
+  height: 20px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.Highlighted {
+  background-color: yellow;
+}
+
+.BlinkingCursor {
+  width: 3px;
+  height: 15px;
+  background-color: red;
+  animation: blinkCursor 1s infinite;
+}
+
+.rectangle {
+  display: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: purple;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.rectangle.visible {
+  display: block;
+}
+
+@keyframes animateLine {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blinkCursor {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.scrolled {
+  font-weight: bold;
+  color: royalblue;
+}
+
